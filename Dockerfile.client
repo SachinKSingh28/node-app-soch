@@ -1,0 +1,9 @@
+FROM node:12.6.0
+
+RUN mkdir /usr/myapp
+
+COPY . /usr/myapp
+
+WORKDIR /usr/myapp
+
+ENTRYPOINT ["npm", "run", "start:web"]
