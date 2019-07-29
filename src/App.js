@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
-import PostViewer from './PostViewer';
-// import Stories from './Stories';
+// import PostViewer from './PostViewer';
+import Header from './Header';
 
 class App extends Component {
   render() {
     return (
       <main>
-        <PostViewer />
+        <Header />
       </main>
     );
   }
