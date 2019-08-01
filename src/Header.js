@@ -2,12 +2,16 @@ import React from 'react';
 import styled from 'styled-components';
 import logo from './header.png';
 
-console.log(logo); // /logo.84287d09.png
-
 const Image = styled.img`
   width: 300px;
   height: 200px;
   padding: 10px 10px 10px 10px;
+`;
+
+
+const Image1 = styled.img`
+  width: 100px;
+  height: 50px;
 `;
 
 const TopHeader = styled.div`
@@ -19,32 +23,17 @@ const TopHeader = styled.div`
   flex-direction:row;
 `;
 
-const TopHeaderLogo = styled.p`
-  width: 230px;
+const TopLeftHeaderLogo = styled.div`
+  width: 100px;
   height: 50px;
-  opacity: 0.49;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 10px 3px rgba(0, 0, 0, 0.5);
-  font-family: Kokonor;
-  font-size: 40px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1.29;
-  letter-spacing: 2px;
-  text-align: left;
-  padding: 10px 10px 10px 10px;
-  color: #b620e0;
 `;
 
-const TopHeaderCircle = styled.p`
-  position: absolute;
-  background: #b620e0;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  text-align: center;
-  margin-top: 12px;
+const TopRightHeaderLogo = styled.div`
+  width: 100px;
+  height: 50px;
+  text-align: right;
   right: 30px;
+  position: absolute;
 `;
 
 const SearchBox = styled.div`
@@ -59,19 +48,27 @@ const SearchBox = styled.div`
   right: 250px;
 `;
 
+const Title = styled.p`
+  position: absolute;
+  text-align: center;
+  right: 250px;
+`;
+
 function Header() {
   // Import result is the URL of your image
   return (
     <div>
     <TopHeader>
-      <TopHeaderLogo>SOCH</TopHeaderLogo>
-      <TopHeaderCircle>S</TopHeaderCircle>
+      <TopLeftHeaderLogo src={logo}>
+        <Image1 src={logo} alt="Logo" /> 
+      </TopLeftHeaderLogo>
       <SearchBox>Search...</SearchBox>
+      <TopRightHeaderLogo src={logo}>
+        <Image1 src={logo} alt="Logo" /> 
+      </TopRightHeaderLogo>
     </TopHeader>
-    <Image src={logo} alt="Logo" /> 
-    <Image src={logo} alt="Logo" /> 
-    <Image src={logo} alt="Logo" /> 
-    <Image src={logo} alt="Logo" /> 
+    <Image src={logo} alt="Logo" />
+    <Title>We envision a world where every individual is a positive and passionate social changemaker.</Title>
     <TopHeader>
     </TopHeader>
     </div>
