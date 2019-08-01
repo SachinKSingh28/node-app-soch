@@ -17,9 +17,9 @@ const Image1 = styled.img`
 const TopHeader = styled.div`
   width: 2305px;
   height: 60px;
-  border: solid 1px #cccccc;
-  background-color: #cccccc;
-  display:flex; 
+  border: solid 1px #D2691E;
+  background-color: #D2691E;
+  display:flex;
   flex-direction:row;
 `;
 
@@ -41,7 +41,7 @@ const SearchBox = styled.div`
   height: 30px;
   border-radius: 45px;
   border: solid 1px #979797;
-  background-color: #ffffff;  
+  background-color: #ffffff;
   position: absolute;
   text-align: left;
   margin-top: 12px;
@@ -51,25 +51,28 @@ const SearchBox = styled.div`
 const Title = styled.p`
   position: absolute;
   text-align: center;
-  right: 250px;
+  right: 450px;
 `;
 
 function Header() {
   // Import result is the URL of your image
   return (
     <div>
-    <TopHeader>
       <TopLeftHeaderLogo src={logo}>
-        <Image1 src={logo} alt="Logo" /> 
+        <Image1 src={logo} alt="Logo" />
       </TopLeftHeaderLogo>
       <SearchBox>Search...</SearchBox>
       <TopRightHeaderLogo src={logo}>
-        <Image1 src={logo} alt="Logo" /> 
+        <Image1 src={logo} alt="Logo" />
       </TopRightHeaderLogo>
+    <TopHeader>
+      <Title>We envision a world where every individual is a positive and passionate social changemaker.</Title>
     </TopHeader>
     <Image src={logo} alt="Logo" />
-    <Title>We envision a world where every individual is a positive and passionate social changemaker.</Title>
     <TopHeader>
+    <Title>OUR PURPOSE –
+      Do Good Platform aims to bring together individuals with a sense of social purpose, to help and motivate each other, and become a community of like-minded change-makers
+    </Title>
     </TopHeader>
     </div>
   );
