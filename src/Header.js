@@ -30,6 +30,7 @@ const MidHeader = styled.div`
   background-color: #D2691E;
   display:flex;
   flex-direction:row;
+  margin: 12px;
 `;
 
 const TopLeftHeaderLogo = styled.div`
