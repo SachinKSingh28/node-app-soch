@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Test Grid</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            .item1 { grid-area: header;}
+            .logoleft { grid-area: toplogoleft;}
+            .logoright {grid-area: toplogoright;}
+            .item2 { 
+                grid-area: main;
+                color: white;
+            }
+            .navigation1 {
+                grid-area: nav1;
+                background-color: #d2691e;
+                color: white;
+            }
+            .navigation2 {
+                grid-area: nav2;
+                background-color: #d2691e;
+                color: white;
+            }
+            .navigation1 > p {
+                border-radius: 8px;
+                border-color: antiquewhite;
+            }
+            .item5 { 
+                grid-area: footer; 
+            }
+            .logoleft > img {
+                border: 1px solid #ddd;
+                border-radius: 8px;
+                padding: 1px;
+                width: 50px;
+            }
+            .logoright > img {
+                border: 1px solid #ddd;
+                border-radius: 8px;
+                padding: 5px;
+                width: 50px;
+            }
+            
+            .item2 {
+                background-color: #d2691e;
+            }
+
+            /* main {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: 100px;
+                grid-gap: 1px;
+            } */
+
+            .wrapper {
+                display: grid;
+                grid-template-areas:
+                    'toplogoleft header header header header toplogoright'
+                    'main main main main main main'
+                    'nav1 nav1 nav1 nav2 nav2 nav2'
+                    'footer footer footer footer footer footer';
+                grid-gap: 1px;
+                padding: 1px;
+            }
+            .wrapper > div {
+                text-align: center;
+                padding: 20px 0;
+                font-size: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div class="wrapper">
+            <div class="logoleft">
+                <img src="images/TSN_LOGO.png" alt="TSN_LOGO">
+            </div>
+            <div class="item1">
+            </div>
+            <div class="logoright">
+                <img src="images/DGP_LOGO.png" alt="DGP_LOGO">
+            </div>
+            <div class="item2">
+                <p>We envision a world where every individual is a positive and passionate social changemaker.</p>              
+            </div>
+            <div class="navigation1">
+                <p>Think Social</p>
+            </div>
+            <div class="navigation2">
+                <p>Contact Us</p>
+            </div>
+                
+            </div>
+        </div>
+    </body>
+</html>
