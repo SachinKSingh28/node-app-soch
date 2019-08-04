@@ -133,14 +133,14 @@
             </div>
             <div class="homelink"><a href="thinksocial.html" >Think Social</a></div>
             <div class="contactlink"><a href="reachus.html">Reach Us</a></div>
-            <div class="moveleft"></div>
-            <div class="storygroup1">
+            <div class="moveleft" id="moveleft"></div>
+            <div class="storygroup1" id="storygroup1">
               <a href="stories/story1.html" ><img src="images/stories/Story1.jpg" alt="STORY_1" class="storyimage">Story 1 aabra ka dabra and again aabra ka dabra</a>
             </div>
-            <div class="storygroup2">
+            <div class="storygroup2" id="storygroup2">
               <a href="stories/story2.html" ><img src="images/stories/Story2.jpg" alt="STORY_2" class="storyimage">Story 2 aabra ka dabra and again aabra ka dabra</a>
             </div>
-            <div class="moveright">
+            <div class="moveright" id="moveright">
             </div>
             <div class="footer">
                 <p>
@@ -148,5 +148,22 @@
                 </p>
             </div>
         </div>
+        <script>
+                var moveleft = document.getElementById("moveleft"); //grab the element
+                moveleft.onclick = function() {
+                    var getstorygroup1div = document.getElementById("storygroup1");
+                    getstorygroup1div.innerHTML = "<a href=\"stories/story2.html\" ><img src=\"images/stories/Story2.jpg\" alt=\"STORY_2\" class=\"storyimage\">Story 2 aabra ka dabra and again aabra ka dabra</a>"  
+                    var getstorygroup2div = document.getElementById("storygroup2");                 
+                    getstorygroup2div.innerHTML = "<a href=\"stories/story3.html\" ><img src=\"images/stories/Story3.jpg\" alt=\"STORY_3\" class=\"storyimage\">Story 3 aabra ka dabra and again aabra ka dabra</a>";
+                }
+    
+                var moveright = document.getElementById("moveright"); //grab the element
+                moveright.onclick = function() {
+                    var getstorygroup1div = document.getElementById("storygroup1");
+                    getstorygroup1div.innerHTML = "<a href=\"stories/story4.html\" ><img src=\"images/stories/Story4.jpg\" alt=\"STORY_4\" class=\"storyimage\">Story 4 aabra ka dabra and again aabra ka dabra</a>"  
+                    var getstorygroup2div = document.getElementById("storygroup2");                 
+                    getstorygroup2div.innerHTML = "<a href=\"stories/story1.html\" ><img src=\"images/stories/Story1.jpg\" alt=\"STORY_1\" class=\"storyimage\">Story 1 aabra ka dabra and again aabra ka dabra</a>";
+                }
+            </script>
     </body>
 </html>
